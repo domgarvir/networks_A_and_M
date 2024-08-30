@@ -1,5 +1,5 @@
-numpy
-pandas
-seaborn
-networkx
+numpy==1.24.6
+pandas==2.2.2
+seaborn==0.13.2
+networkx==3.3
 
