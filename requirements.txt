@@ -1,5 +1,5 @@
-numpy==1.25.0
+numpy
 pandas==2.2.2
 seaborn==0.13.2
 networkx==3.3
-
+scipy
