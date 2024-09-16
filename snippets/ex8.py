@@ -28,8 +28,7 @@ print("\n2 - The species with more predators is %s\n" % (K_out.idxmax()) )
 K_in=pd.Series(dict(FW.in_degree()))
 print("\n3 - The species with a more varied diet is %s\n" % (K_in.idxmax()))
 
-#4)  - What are the species eaten by the most generalist predator? 
+#4)  - What are the species that prey on the most generalist predator? 
 predator=K_in.idxmax()
-print("\n4 - The species feeding on the predator are:")
+print("\n4 - The species feeding on the generalist predator are:")
 print(list(FW.successors(predator)))
-
