@@ -1,57 +1,42 @@
 graph [
-  name "fast_gnp_random_graph(4,5,0.4)"
   node [
     id 0
-    label "0"
+    label "Paul"
     bipartite 0
   ]
   node [
     id 1
-    label "1"
+    label "John"
     bipartite 0
   ]
   node [
     id 2
-    label "2"
+    label "George"
     bipartite 0
   ]
   node [
     id 3
-    label "3"
+    label "Richard"
     bipartite 0
   ]
   node [
     id 4
-    label "4"
+    label "new year"
     bipartite 1
   ]
   node [
     id 5
-    label "5"
+    label "G. Birthday"
     bipartite 1
   ]
   node [
     id 6
-    label "6"
-    bipartite 1
-  ]
-  node [
-    id 7
-    label "7"
-    bipartite 1
-  ]
-  node [
-    id 8
-    label "8"
+    label "summer solstice"
     bipartite 1
   ]
   edge [
     source 0
-    target 7
-  ]
-  edge [
-    source 0
-    target 8
+    target 4
   ]
   edge [
     source 1
@@ -59,10 +44,14 @@ graph [
   ]
   edge [
     source 1
-    target 5
+    target 6
   ]
   edge [
     source 1
+    target 5
+  ]
+  edge [
+    source 2
     target 6
   ]
   edge [
@@ -70,19 +59,11 @@ graph [
     target 4
   ]
   edge [
-    source 2
-    target 7
-  ]
-  edge [
     source 3
     target 5
   ]
   edge [
     source 3
-    target 7
-  ]
-  edge [
-    source 3
-    target 8
+    target 6
   ]
 ]

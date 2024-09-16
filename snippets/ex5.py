@@ -21,4 +21,4 @@ G.add_edges_from(zip(edges['level_0'], edges['level_1']))
 #print("Nodes:", G.nodes)
 #print("Edges:", G.edges)
 
-nx.draw(DG, with_labels=True)
+nx.draw(G, with_labels=True)
