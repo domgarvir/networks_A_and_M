@@ -8,6 +8,11 @@ import json
 from itertools import combinations
 import itertools
 import random as rnd
+from scipy.optimize import curve_fit,  fsolve
+
+# Suppress FutureWarning messages
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
 def draw_colored_multigraph(MDG):
     
@@ -228,6 +233,91 @@ def nestedness2(web):
 
     return out
 
+def nestedness(G):
+    
+    web=nx.to_pandas_adjacency(G)
+    # Get the number of rows (SA) and columns (SP)
+    SA, SP = web.shape
+
+    # Step 1: Column calculations
+    N = web.T@web  # Equivalent of t(web) %*% web
+    num = np.copy(N)
+    num[np.tril_indices(SP, k=0)] = 0  # Set lower triangle (including diagonal) to 0
+
+    # Calculate denominator
+    diag_N = np.diag(N)[:, None]  # Convert diagonal to column vector
+    den = np.ones((SP, 1))* diag_N
+    den = den @ np.ones((1, SP))
+    den=np.minimum(den, den.T)
+    den[np.tril_indices(SP, k=0)] = 0  # Set lower triangle (including diagonal) to 0
+    
+    n1 = np.sum(num)
+    n2 = np.sum(den)
+    nP = n1 / n2
+
+    # Step 2: Row calculations
+    N = web@web.T  # Equivalent of t(web) %*% web
+    num = np.copy(N)
+    num[np.tril_indices(SA, k=0)] = 0  # Set lower triangle (including diagonal) to 0
+
+    # Calculate denominator
+    diag_N = np.diag(N)[:, None]  # Convert diagonal to column vector
+    den = np.ones((SA, 1))* diag_N
+    den = den @ np.ones((1, SA))
+    den=np.minimum(den, den.T)
+    den[np.tril_indices(SA, k=0)] = 0  # Set lower triangle (including diagonal) to 0
+
+    n1b=np.sum(num)
+    n2b=np.sum(den)
+    # Step 3: Final nestedness calculation
+    out = (n1 + n1b) / (n2 + n2b)
+
+    return out
+
+def nestedness_bipartite(B,bottom_nodes):
+    #get matrix representation (incidence)
+    top_nodes = set(B) - bottom_nodes
+    web=nx.to_pandas_adjacency(B).loc[list(top_nodes), list(bottom_nodes)]
+    
+    # Get the number of rows (SA) and columns (SP)
+    SA, SP = web.shape
+
+    # Step 1: Column calculations
+    N = web.T@web  # Equivalent of t(web) %*% web
+    num = np.copy(N)
+    num[np.tril_indices(SP, k=0)] = 0  # Set lower triangle (including diagonal) to 0
+
+    # Calculate denominator
+    diag_N = np.diag(N)[:, None]  # Convert diagonal to column vector
+    den = np.ones((SP, 1))* diag_N
+    den = den @ np.ones((1, SP))
+    den=np.minimum(den, den.T)
+    den[np.tril_indices(SP, k=0)] = 0  # Set lower triangle (including diagonal) to 0
+    
+    n1 = np.sum(num)
+    n2 = np.sum(den)
+    nP = n1 / n2
+
+    # Step 2: Row calculations
+    N = web@web.T  # Equivalent of t(web) %*% web
+    num = np.copy(N)
+    num[np.tril_indices(SA, k=0)] = 0  # Set lower triangle (including diagonal) to 0
+
+    # Calculate denominator
+    diag_N = np.diag(N)[:, None]  # Convert diagonal to column vector
+    den = np.ones((SA, 1))* diag_N
+    den = den @ np.ones((1, SA))
+    den=np.minimum(den, den.T)
+    den[np.tril_indices(SA, k=0)] = 0  # Set lower triangle (including diagonal) to 0
+
+    n1b=np.sum(num)
+    n2b=np.sum(den)
+    # Step 3: Final nestedness calculation
+    out = (n1 + n1b) / (n2 + n2b)
+
+    return out
+
+
 
 def get_nestedness_bipartite(Imat):
 #this function takes a incidence matrix I, generates the biadjacency A, and cuantifies nestedness
@@ -344,48 +434,6 @@ def calc_degree_degree_correlations_bipart(Imat):
 
     return r_pearson, k_med, k2_med, k3_med
 
-# randomization functions fro PK model
-def find_presences(input_matrix):
-    num_rows, num_cols = input_matrix.shape
-    hp = []
-    iters = num_rows if num_cols >= num_rows else num_cols
-    input_matrix_b = input_matrix if num_cols >= num_rows else np.transpose(input_matrix)
-    for r in range(iters):
-        hp.append(list(np.where(input_matrix_b[r] == 1)[0]))
-
-    return hp 
-def curve_ball(input_matrix, r_hp, num_iterations=-1):
-    num_rows, num_cols = input_matrix.shape
-    l = range(len(r_hp))
-    num_iters = 5*min(num_rows, num_cols) if num_iterations == -1 else num_iterations
-    for rep in range(num_iters):
-        AB = rnd.sample(l, 2)
-        a = AB[0]
-        b = AB[1]
-        ab = set(r_hp[a])&set(r_hp[b]) # common elements
-        l_ab=len(ab)
-        l_a=len(r_hp[a])
-        l_b=len(r_hp[b])
-        if l_ab not in [l_a,l_b]:
-            tot=list(set(r_hp[a]+r_hp[b])-ab)
-            ab=list(ab)
-            rnd.shuffle(tot)
-            L=l_a-l_ab
-            r_hp[a] = ab+tot[:L]
-            r_hp[b] = ab+tot[L:]
-    out_mat = np.zeros(input_matrix.shape, dtype='int8') if num_cols >= num_rows else  np.zeros(input_matrix.T.shape, dtype='int8')
-    for r in range(min(num_rows, num_cols)):
-        out_mat[r, r_hp[r]] = 1
-    result = out_mat if num_cols >= num_rows else out_mat.T
-    return result
-
-def randomization_constant_PK(web):
-    
-    r_hp=find_presences(web.values)
-    RM=curve_ball(web.values,r_hp) #randomized by curveball
-    rnd_web=pd.DataFrame(RM,index=web.index, columns=web.columns)
-
-    return rnd_web
 
 def get_triangle_neighbors(G, node) -> set:
     """
@@ -519,9 +567,10 @@ motifs = {
     'S5': nx.DiGraph([(1,2),(1,3)])
  }
 
-def mcounter(gr, mo):
 
-    """Counts motifs in a directed graph
+def mcounter_py3(gr, mo):
+    """
+    Counts motifs in a directed graph
     :param gr: A ``DiGraph`` object
     :param mo: A ``dict`` of motifs to count
     :returns: A ``dict`` with the number of each motifs, with the same keys as ``mo``
@@ -529,36 +578,289 @@ def mcounter(gr, mo):
     the original graph, and look for isomorphisms in the motifs contained
     in a dictionary. The returned object is a ``dict`` with the number of
     times each motif was found.::
-        >>> print mcounter(gr, mo)
+        >>> print(mcounter(gr, mo))
         {'S1': 4, 'S3': 0, 'S2': 1, 'S5': 0, 'S4': 3}
     """
-    #This function will take each possible subgraphs of gr of size 3, then
-    #compare them to the mo dict using .subgraph() and is_isomorphic
-    
-    #This line simply creates a dictionary with 0 for all values, and the
-    #motif names as keys
+    # This function will take each possible subgraph of gr of size 3, then
+    # compare them to the mo dict using .subgraph() and is_isomorphic
 
+    # This line simply creates a dictionary with 0 for all values, and the
+    # motif names as keys
     mcount = dict(zip(mo.keys(), list(map(int, np.zeros(len(mo))))))
-    nodes = gr.nodes()
+    nodes = list(gr.nodes())
 
-    #We use iterools.product to have all combinations of three nodes in the
-    #original graph. Then we filter combinations with non-unique nodes, because
-    #the motifs do not account for self-consumption.
+    # We use itertools.product to have all combinations of three nodes in the
+    # original graph. Then we filter combinations with non-unique nodes, because
+    # the motifs do not account for self-consumption.
+    triplets = list(itertools.product(nodes, repeat=3))
+    triplets = [trip for trip in triplets if len(set(trip)) == 3]
+    triplets = list(map(list, map(np.sort, triplets)))
 
-    triplets = list(itertools.product(*[nodes, nodes, nodes]))
-    triplets = [trip for trip in triplets if len(list(set(trip))) == 3]
-    triplets = map(list, map(np.sort, triplets))
-    u_triplets = []
-    [u_triplets.append(trip) for trip in triplets if not u_triplets.count(trip)]
+    # Removing duplicates by converting list of lists to list of tuples for faster uniqueness check
+    u_triplets = list(map(list, set(tuple(trip) for trip in triplets)))
 
-    #The for each each of the triplets, we (i) take its subgraph, and compare
-    #it to all fo the possible motifs
-
+    # The for each each of the triplets, we (i) take its subgraph, and compare
+    # it to all of the possible motifs
     for trip in u_triplets:
         sub_gr = gr.subgraph(trip)
-        mot_match = map(lambda mot_id: nx.is_isomorphic(sub_gr, mo[mot_id]), motifs.keys())
-        match_keys = [mo.keys()[i] for i in xrange(len(mo)) if mot_match[i]]
+        mot_match = [nx.is_isomorphic(sub_gr, mo[mot_id]) for mot_id in mo.keys()]
+        match_keys = [list(mo.keys())[i] for i in range(len(mo)) if mot_match[i]]
+        
         if len(match_keys) == 1:
             mcount[match_keys[0]] += 1
 
     return mcount
+
+## rewiring 
+def find_presences(input_matrix):
+    num_rows, num_cols = input_matrix.shape
+    hp = []
+    iters = num_rows if num_cols >= num_rows else num_cols
+    input_matrix_b = input_matrix if num_cols >= num_rows else np.transpose(input_matrix)
+    for r in range(iters):
+        hp.append(list(np.where(input_matrix_b[r] == 1)[0]))
+
+    return hp
+
+def curve_ball(input_matrix, r_hp, num_iterations=-1):
+    num_rows, num_cols = input_matrix.shape
+    l = range(len(r_hp))
+    num_iters = 5*min(num_rows, num_cols) if num_iterations == -1 else num_iterations
+    for rep in range(num_iters):
+        AB = rnd.sample(l, 2)
+        a = AB[0]
+        b = AB[1]
+        ab = set(r_hp[a])&set(r_hp[b]) # common elements
+        l_ab=len(ab)
+        l_a=len(r_hp[a])
+        l_b=len(r_hp[b])
+        if l_ab not in [l_a,l_b]:
+            tot=list(set(r_hp[a]+r_hp[b])-ab)
+            ab=list(ab)
+            rnd.shuffle(tot)
+            L=l_a-l_ab
+            r_hp[a] = ab+tot[:L]
+            r_hp[b] = ab+tot[L:]
+    out_mat = np.zeros(input_matrix.shape, dtype='int8') if num_cols >= num_rows else  np.zeros(input_matrix.T.shape, dtype='int8')
+    for r in range(min(num_rows, num_cols)):
+        out_mat[r, r_hp[r]] = 1
+    result = out_mat if num_cols >= num_rows else out_mat.T
+    return result
+
+def randomization_constant_Kseq(G, directed=False):
+    
+    Amat=nx.to_pandas_adjacency(G)
+    
+    r_hp=find_presences(Amat.values)
+    RM=curve_ball(Amat.values,r_hp) #randomized by curveball
+    rnd_Amat=pd.DataFrame(RM,index=Amat.index, columns=Amat.columns)
+    
+    Idf=rnd_Amat.unstack() #I es P(row)XA(col), y el unstack pone a los pollinator como 1ª columna, lo que implica que son el source
+    Idf=Idf[Idf>0]
+    
+    if (directed):
+        G_rnd=nx.DiGraph()
+    else:
+        G_rnd=nx.Graph()
+    species=G.nodes()
+    G_rnd.add_nodes_from(species)
+    edge_list = list(Idf.to_frame().to_records())
+    G_rnd.add_weighted_edges_from(edge_list) #parece que lo entiende justo al reves
+    
+    
+    return G_rnd.reverse()
+
+def randomization_constant_Kseq_bipart(B,bottom_nodes,top_nodes):
+    
+    web=nx.to_pandas_adjacency(B).loc[list(bottom_nodes), list(top_nodes)]
+    
+    r_hp=find_presences(web.values)
+    RM=curve_ball(web.values,r_hp) #randomized by curveball
+    rnd_web=pd.DataFrame(RM,index=web.index, columns=web.columns)
+
+    Idf=rnd_web.unstack() #I es P(row)XA(col), y el unstack pone a los pollinator como 1ª columna, lo que implica que son el source
+    Idf=Idf[Idf>0]
+    
+    #create bipartite graph
+    B_rnd = nx.Graph()
+    B_rnd.add_nodes_from(bottom_nodes, bipartite="plant")
+    B_rnd.add_nodes_from(top_nodes, bipartite="pollinator")
+    edge_list = list(Idf.to_frame().to_records())
+    B_rnd.add_weighted_edges_from(edge_list) #parece que lo entiende justo al reves
+    
+    return B_rnd
+
+def from_Imat_to_nxBipart(I):
+
+    Idf=I.unstack() #I es P(row)XA(col), y el unstack pone a los pollinator como 1ª columna, lo que implica que son el source
+    #remove zeros
+    Idf=Idf[Idf>0]
+
+    #create bipartite graph
+    B = nx.Graph()
+    B.add_nodes_from(list(Idf.index.unique(level='Plant_gen_sp')), bipartite="Plant")
+    B.add_nodes_from(list(Idf.index.unique(level='Pollinator_gen_sp')), bipartite="Pollinator")
+    edge_list = list(Idf.to_frame().to_records())
+    B.add_weighted_edges_from(edge_list) #parece que lo entiende justo al reves
+
+    return B
+
+
+def rewire_constantNL(Imat):
+    
+    net=from_Imat_to_nxBipart(Imat)
+
+    rnd_net = nx.Graph()
+    #first copy all original nodes so they remain there:
+    rnd_net.add_nodes_from(net.nodes(data=True))
+    #in this rewrirign we will create as many links in the new networks as where in the original, irrespective of the degree:
+    change=0
+    nodes_a=[]
+    nodes_b=[]
+    #get different sets of nodes, since network may be not completely connected we sort like this, based in the label
+    for node in net.nodes():
+        if (net.nodes[node]['bipartite']=="Plant"):
+            nodes_b.append(node)#plants
+        else:
+            nodes_a.append(node)#animals
+
+    edges=list(rnd_net.edges())
+
+    #copy lists because we are going to force that each node has at least 1 connection
+    unconnected_nodes_a = nodes_a.copy()
+    unconnected_nodes_b = nodes_b.copy()
+
+    #print("comenzamos con %s edges" % len(list(net.edges())))
+    L=len(list(net.edges()))
+    while (change < L):
+        #print("change %s of %s" %(change,len(list(net.edges()))))
+        from_unconnected_a=False
+        if (len(unconnected_nodes_a)>0): #while there are unconnected nodes
+            node_a=unconnected_nodes_a[random.randint(0,len(unconnected_nodes_a)-1)]
+            from_unconnected_a = True
+        else:
+            node_a = nodes_a[random.randint(0, len(nodes_a) - 1)]
+
+        from_unconnected_b=False
+        if (len(unconnected_nodes_b)>0):
+            node_b = unconnected_nodes_b[random.randint(0, len(unconnected_nodes_b) - 1)]
+            from_unconnected_b=True
+        else:
+            node_b=nodes_b[random.randint(0,len(nodes_b)-1)]
+
+        while ( ((node_a,node_b) in edges) or ((node_b,node_a) in edges) ):
+            #in principle it is not possible to have repeated edges if taken from unconnected nodes
+            node_b=nodes_b[random.randint(0,len(nodes_b)-1)]
+            node_a = nodes_a[random.randint(0,len(nodes_a) - 1)]
+
+        if (from_unconnected_a):
+            unconnected_nodes_a.remove(node_a)
+        if (from_unconnected_b):
+            unconnected_nodes_b.remove(node_b)
+
+        rnd_net.add_edge(node_a,node_b,weight=1)#unweighted
+        edges = list(rnd_net.edges())
+        #print(edges)
+        change = change +1
+    rnd_Imat=from_nxBipart_to_Imat(rnd_net)    
+
+    return rnd_Imat
+
+def rewire_constantNL_fom_net(net):
+
+    rnd_net = nx.Graph()
+    #first copy all original nodes so they remain there:
+    rnd_net.add_nodes_from(net.nodes(data=True))
+    #in this rewrirign we will create as many links in the new networks as where in the original, irrespective of the degree:
+    change=0
+    nodes_a=[]
+    nodes_b=[]
+    #get different sets of nodes, since network may be not completely connected we sort like this, based in the label
+    for node in net.nodes():
+        if (net.nodes[node]['bipartite']=="Plant"):
+            nodes_b.append(node)#plants
+        else:
+            nodes_a.append(node)#animals
+
+    edges=list(rnd_net.edges())
+
+    #copy lists because we are going to force that each node has at least 1 connection
+    unconnected_nodes_a = nodes_a.copy()
+    unconnected_nodes_b = nodes_b.copy()
+
+    #print("comenzamos con %s edges" % len(list(net.edges())))
+    L=len(list(net.edges()))
+    while (change < L):
+        #print("change %s of %s" %(change,len(list(net.edges()))))
+        from_unconnected_a=False
+        if (len(unconnected_nodes_a)>0): #while there are unconnected nodes
+            node_a=unconnected_nodes_a[random.randint(0,len(unconnected_nodes_a)-1)]
+            from_unconnected_a = True
+        else:
+            node_a = nodes_a[random.randint(0, len(nodes_a) - 1)]
+
+        from_unconnected_b=False
+        if (len(unconnected_nodes_b)>0):
+            node_b = unconnected_nodes_b[random.randint(0, len(unconnected_nodes_b) - 1)]
+            from_unconnected_b=True
+        else:
+            node_b=nodes_b[random.randint(0,len(nodes_b)-1)]
+
+        while ( ((node_a,node_b) in edges) or ((node_b,node_a) in edges) ):
+            #in principle it is not possible to have repeated edges if taken from unconnected nodes
+            node_b=nodes_b[random.randint(0,len(nodes_b)-1)]
+            node_a = nodes_a[random.randint(0,len(nodes_a) - 1)]
+
+        if (from_unconnected_a):
+            unconnected_nodes_a.remove(node_a)
+        if (from_unconnected_b):
+            unconnected_nodes_b.remove(node_b)
+
+        rnd_net.add_edge(node_a,node_b,weight=1)#unweighted
+        edges = list(rnd_net.edges())
+        #print(edges)
+        change = change +1
+    #rnd_Imat=from_nxBipart_to_Imat(rnd_net)    
+
+    return rnd_net
+
+def sample_path_lengths(G, nodes=None, trials=1000):
+    if nodes is None:
+        nodes = list(G)
+    else:
+        nodes = list(nodes)
+
+    pairs = np.random.choice(nodes, (trials, 2))
+    lengths = [nx.shortest_path_length(G, *pair)
+               for pair in pairs]
+    return lengths
+
+def estimate_path_length(G, nodes=None, trials=1000):
+    return np.mean(sample_path_lengths(G, nodes, trials))
+
+def read_graph_facebook():
+    facebook = pd.read_csv(
+    "./data/facebook_combined.txt.gz",
+    compression="gzip",
+    sep=" ",
+    names=["start_node", "end_node"],
+    )
+    G = nx.from_pandas_edgelist(facebook, "start_node", "end_node")
+
+    return G
+
+#define functions to fit: Truncated power law and normal power law
+def EF(k, b,cinv):
+    return b*np.exp( -cinv*k)
+
+def TPL(k, b, gamma,ko_inv):
+    return b * pow(k,-1*gamma)*np.exp( -ko_inv*k)  #ko_inv=1/maxk
+
+def PL(k, b, gamma):
+    return b * pow(k,-1*gamma)
+
+def TPL_equation(k, b, gamma, ko_inv):
+    return b * pow(k, -gamma) * np.exp(-ko_inv * k) - 0.9
+
+def PL_equation(k, b, gamma):
+    return b * pow(k,-1*gamma) - 0.9
