@@ -9,6 +9,7 @@ from itertools import combinations
 import itertools
 import random as rnd
 from scipy.optimize import curve_fit,  fsolve
+from scipy.stats import mvn
 
 # Suppress FutureWarning messages
 import warnings
@@ -849,6 +850,10 @@ def read_graph_facebook():
 
     return G
 
+def load_airports_data():
+    pass_air_data = pd.read_csv("./data/passengers.csv", index_col="id")
+    return pass_air_data
+
 #define functions to fit: Truncated power law and normal power law
 def EF(k, b,cinv):
     return b*np.exp( -cinv*k)
@@ -864,3 +869,134 @@ def TPL_equation(k, b, gamma, ko_inv):
 
 def PL_equation(k, b, gamma):
     return b * pow(k,-1*gamma) - 0.9
+
+def load_game_of_thrones_data():
+    books = pd.read_csv("./data/game_of_thrones_network/asoiaf.csv", index_col="id")
+    return books
+
+def interaction_matrix(web, gamma_avg=0.01, rho=0.005, delta=0):
+    SA, SP = web.shape
+
+    plant_names=list(web.columns)
+    pol_names=list(web.index)
+
+    alphaA = rho * np.ones((SA, SA)) + (1 - rho) * np.eye(SA)
+    alphaP = rho * np.ones((SP, SP)) + (1 - rho) * np.eye(SP)
+
+    alphaA_df = pd.DataFrame(alphaA, index=pol_names, columns=pol_names)
+    alphaP_df = pd.DataFrame(alphaP, index=plant_names, columns=plant_names)
+
+    gammaA = (np.diag(np.power(np.sum(web, axis=1), -delta)) @ web).values
+    gammaP = (np.diag(np.power(np.sum(web, axis=0), -delta)) @ web.T).values
+
+    f = np.sum(gammaA[web == 1] + gammaP[web.T == 1]) / (2 * sum(np.sum(web == 1)))
+    
+    gammaA = (gamma_avg / f) * (np.diag(np.power(np.sum(web, axis=1), -delta)) @ web)
+    gammaP = (gamma_avg / f) * np.diag(np.power(np.sum(web, axis=0), -delta)) @ web.T
+
+    gammaA_df=pd.DataFrame(gammaA.values, index=pol_names, columns=plant_names)
+    gammaP_df=pd.DataFrame(gammaP.values, index=plant_names, columns=pol_names)
+
+
+    gammaA[np.isnan(gammaA)] = 0
+    gammaP[np.isnan(gammaP)] = 0
+
+    alpha = np.block([
+        [alphaA, -gammaA],
+        [-gammaP, alphaP]
+    ])
+
+    row_names = pol_names + plant_names
+    col_names = pol_names + plant_names
+
+    alpha_df = pd.DataFrame(alpha, index=row_names, columns=col_names)
+
+    out = {'alpha': alpha_df,
+        'alphaA': alphaA_df,
+        'alphaP': alphaP_df,
+        'gammaA': gammaA_df,
+        'gammaP': gammaP_df
+    }
+
+    return out
+
+def simplex_sampling(m, n):
+    result = []
+    for _ in range(m):
+        # Generate n-1 sorted uniform random values between 0 and 1
+        dist = np.sort(np.random.uniform(0, 1, n - 1))
+        dist = np.append(dist, 1)  # Add 1 to the end
+        # Compute the differences to create the simplex sample
+        result.append(np.diff(np.insert(dist, 0, 0)))  # Equivalent to c(dist[1], diff(dist)) in R
+    return result
+
+def calc_Omegas_py(myweb,size_norm=True, no_log=True,rho=0.005,gamma_avg=0.1, delta=0):
+    N=myweb.shape[0]+myweb.shape[1]
+    Na=myweb.shape[0]
+    Np=myweb.shape[1]
+
+    m=interaction_matrix(myweb, gamma_avg = gamma_avg, rho = rho, delta = delta)
+
+    adj=m["alpha"]
+
+    try:
+        O = Omega_function(adj)
+    except:
+        O = np.nan  
+
+    Beta_a=m['alphaA']
+    Beta_p=m[ 'alphaP']
+    Gamma_a=m['gammaA']
+    Gamma_p=m['gammaP']
+
+    Beta_p_mod= np.matrix(Gamma_p)*np.linalg.inv(np.matrix(Beta_a))*np.matrix(Gamma_a)
+    Beta_a_mod= np.matrix(Gamma_a)*np.linalg.inv(np.matrix(Beta_p))*np.matrix(Gamma_p)
+        
+    Beta_p_eff = np.matrix(Beta_p) - Beta_p_mod
+    Beta_a_eff = np.matrix(Beta_a) - Beta_a_mod
+
+    try:
+        O_P_eff = Omega_function(Beta_p_eff)
+    except:
+        O_P_eff = np.nan
+
+    try:        
+        O_A_eff = Omega_function(Beta_a_eff)
+    except:
+        O_A_eff = np.nan    
+
+    if (size_norm):
+        if (no_log):
+            om= pow(pow(10,O),1./N)
+            OP_eff= pow(pow(10,O_P_eff),1./Np)
+            OA_eff=pow(pow(10,O_A_eff),1./Na)
+        else:    
+            om= np.log10(pow(pow(10,O[0]),1./N))
+            OP_eff= np.log10(pow(pow(10,O_P_eff),1./Np))
+            OA_eff=np.log10(pow(pow(10,O_A_eff),1./Na))
+    else:
+        if (no_log):
+            om=pow(10,O)
+            OP_eff=pow(10,O_P_eff)
+            OA_eff=pow(10,O_A_eff)
+        else:    
+            om=O
+            OP_eff=O_P_eff
+            OA_eff=O_A_eff
+
+    return(om,OP_eff,OA_eff)
+
+def Omega_function(alpha):
+    S = alpha.shape[0]
+    Sigma = np.linalg.inv(alpha.T @ alpha)
+    m = np.zeros((S, 1))
+    a = np.zeros((S, 1))
+    b = np.full((S, 1), np.inf)
+    lower = np.zeros(S)
+    upper = np.full(S, np.inf)
+    mean = np.zeros(S)
+    
+    d, _ = mvn.mvnun(lower, upper, mean, Sigma)
+    
+    out = np.log10(d)
+    return out

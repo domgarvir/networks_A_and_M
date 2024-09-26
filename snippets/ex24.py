@@ -1,0 +1,2 @@
+#Remember that we should use degree centrality when we want to compare nodes across networks that are different. 
+#The degree centrality is a normalized measure of importance based on how many connections I have from all those that are possible.
