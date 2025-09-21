@@ -1,0 +1,1 @@
+print("The simplest clique is an edge.")
