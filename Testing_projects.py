@@ -245,6 +245,24 @@ edges_all = edges_all.merge(
     left_on="target", right_on="Spec", how="left"
 ).rename(columns={"Species names":"target_name"}).drop(columns="Spec")
 
+#
+MDG = nx.MultiDiGraph()
+
+# Add nodes (with labels if you want)
+for _, row in edges_all.iterrows():
+    MDG.add_node(row["source"], label=row["source_name"])
+    MDG.add_node(row["target"], label=row["target_name"])
+
+# Add edges with interaction type
+for _, row in edges_all.iterrows():
+    MDG.add_edge(row["source"], row["target"], interaction=row["interaction"])
+
+#if you want you can add the other rest of metadata of nodes as node atttributes
+#this creates a dictinary where each node has all the attributes
+node_attrs = meta.set_index("Spec")[["trophic", "Phyllum", "BodyMass"]].to_dict(orient="index")
+#then add the attributes to each node: we insert the dictionary of attributes inside the network container
+nx.set_node_attributes(MDG, node_attrs)    
+
 # -----------------------------------------------------------------------------------
 # 8 Mutualistic networks ------------------------------------------------------------
 my_path="./data/Projects/MUTUALISTIC/"
@@ -267,3 +285,39 @@ interactions = my_df.stack().reset_index()
 interactions.columns = ["Plant", "Animal", "Weight"]
 interactions = interactions[interactions["Weight"] > 0].reset_index(drop=True)
 #--------------------------------------------------------------------------------------
+#9 Spatial Plant Pollinator networks---------------------------------------------------
+
+my_path="./data/Projects/SPATIAL/"
+
+network_names={
+"Bnet1": "Favaritx", "Bnet2":"Platja Es Grau","Bnet3":"Sa Bassa",
+"Bnet4":"costa Son Bou", "Bnet5":"Llucalari", "Bnet6":"Sant Jaume de Dalt", 
+"Bnet7":"Cala Tirant","Bnet8":"Salinas", "Bnet9":"Torre Fornells"
+}
+webs=["1","2","3","4","5","6","7","8","9"]
+web=[0] #from 1 to 9
+#we load the networks one by one
+
+filename=my_path+"Bnet_"+web+".csv"
+
+Idf=pd.read_csv(filename, index_col=None,header=0)
+
+#now we create the bipartite network:
+B = nx.Graph()
+
+# Add plant nodes and animal nodes
+plant_nodes = Idf["Plant_sp"].unique()
+B.add_nodes_from(plant_nodes, bipartite="plant")
+#for animals include family, so we do one by one
+animal_nodes = Idf[["Visitor_sp", "Family"]].drop_duplicates()
+for _, row in animal_nodes.iterrows():
+    B.add_node(row["Visitor_sp"],
+               bipartite="animal",
+               Family=row["Family"])
+
+# 3. Add edges with weight from FVR
+edges = list(Idf[["Plant_sp", "Visitor_sp", "FVR"]].itertuples(index=False, name=None))
+B.add_weighted_edges_from(edges, weight="FVR")
+#-----------------------------------------------------------------------------------
+
+

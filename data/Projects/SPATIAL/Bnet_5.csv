@@ -1,0 +1,207 @@
+Plant_sp,Visitor_sp,Family,Order,FVR
+Reichardia tingitana,Balaustium sp.,Erythraeidae,Arachnida,0.5000
+Reichardia tingitana,Balaustium sp.,Erythraeidae,Arachnida,1.6000
+Reichardia tingitana,Balaustium sp.,Erythraeidae,Arachnida,1.2000
+Scabiosa atropurpurea,Balaustium sp.,Erythraeidae,Arachnida,0.1000
+Eryngium maritimum,Bruchidius sp.,Bruchidae,Coleoptera,0.1000
+Reichardia tingitana,Spermophagus sp. ,Bruchidae,Coleoptera,0.3000
+Reichardia tingitana,Spermophagus sp. ,Bruchidae,Coleoptera,0.1333
+Reichardia tingitana,Spermophagus sp. ,Bruchidae,Coleoptera,0.8000
+Reichardia tingitana,Spermophagus sp. ,Bruchidae,Coleoptera,1.6000
+Reichardia tingitana,Spermophagus sp. ,Bruchidae,Coleoptera,0.6000
+Scabiosa atropurpurea,Spermophagus sp. ,Bruchidae,Coleoptera,0.2000
+Euphorbia sp.,Spermophagus sp. ,Bruchidae,Coleoptera,1.2632
+Euphorbia sp.,Spermophagus sp. ,Bruchidae,Coleoptera,1.2500
+Eryngium maritimum,Stenopterus rufus,Cerambycidae,Coleoptera,0.1000
+Eryngium maritimum,Stenopterus rufus,Cerambycidae,Coleoptera,0.3000
+Echium plantagineum,Oxythyrea funesta,Cetoniidae,Coleoptera,0.1000
+Echium plantagineum,Oxythyrea funesta,Cetoniidae,Coleoptera,0.2000
+Echium plantagineum,Oxythyrea funesta,Cetoniidae,Coleoptera,0.1000
+Echium plantagineum,Oxythyrea funesta,Cetoniidae,Coleoptera,0.1000
+Cakile maritima,Oxythyrea funesta,Cetoniidae,Coleoptera,0.1000
+Scabiosa atropurpurea,Oxythyrea funesta,Cetoniidae,Coleoptera,0.1000
+Lobularia maritima,Psilothrix aureola ,Melyridae,Coleoptera,0.1000
+Reichardia tingitana,Psilothrix cyaneus,Melyridae,Coleoptera,0.2647
+Scabiosa atropurpurea,Psilothrix cyaneus,Melyridae,Coleoptera,0.4000
+Reichardia tingitana,Psilothrix cyaneus,Melyridae,Coleoptera,0.1000
+Reichardia tingitana,Psilothrix viridicoerulea,Melyridae,Coleoptera,0.1000
+Reichardia tingitana,Psilothrix viridicoerulea,Melyridae,Coleoptera,0.1000
+Reichardia tingitana,Mordellistena sp.,Mordellidae,Coleoptera,0.1000
+Reichardia tingitana,Oedemera flavipes,Oedemeridae,Coleoptera,0.5294
+Cakile maritima,Oedemera flavipes,Oedemeridae,Coleoptera,0.3000
+Cakile maritima,Oedemera flavipes,Oedemeridae,Coleoptera,0.2000
+Lobularia maritima,Anaspis sp.  ,Scraptiidae,Coleoptera,0.5714
+Euphorbia sp.,Anaspis sp.  ,Scraptiidae,Coleoptera,0.1214
+Teucrium marum,Exoprosopa italica,Bombyliidae,Diptera,0.2000
+Euphorbia sp.,Dolichopus sp.,Dolichoporidae,Diptera,1.2632
+Eryngium maritimum,Wiedemannia sp.,Empididae,Diptera,0.1000
+Eryngium maritimum,Wiedemannia sp.,Empididae,Diptera,0.2000
+Lobularia maritima,Dasyphora albofasciata,Muscidae,Diptera,0.5455
+Lobularia maritima,Dasyphora albofasciata,Muscidae,Diptera,0.3846
+Frankenia hirsuta,Helina reversio,Muscidae,Diptera,0.2500
+Euphorbia sp.,Helina reversio,Muscidae,Diptera,0.5347
+Euphorbia sp.,Helina reversio,Muscidae,Diptera,0.1000
+Centranthus calcitrapae,Lispe sp.,Muscidae,Diptera,0.2000
+Lobularia maritima,Lispe sp.,Muscidae,Diptera,0.2000
+Euphorbia sp.,Musca autumnalis,Muscidae,Diptera,0.1000
+Lobularia maritima,Musca autumnalis,Muscidae,Diptera,0.1000
+Euphorbia sp.,Muscidae sp.,Muscidae,Diptera,0.1000
+Crucianella maritima,Stomoxys calcitrans,Muscidae,Diptera,0.1000
+Lobularia maritima,Sarcophaga sp.,Sarcophagidae,Diptera,0.3000
+Reichardia tingitana,Sarcophaga sp.,Sarcophagidae,Diptera,0.1000
+Euphorbia paralias,Sarcophaga sp.,Sarcophagidae,Diptera,1.1000
+Euphorbia paralias,Sarcophaga sp.,Sarcophagidae,Diptera,0.4000
+Euphorbia paralias,Sarcophaga sp.,Sarcophagidae,Diptera,0.5818
+Reichardia tingitana,Sarcophaga sp.,Sarcophagidae,Diptera,0.1000
+Eryngium maritimum,Sarcophaga sp.,Sarcophagidae,Diptera,0.1000
+Eryngium maritimum,Sarcophaga sp.,Sarcophagidae,Diptera,1.0000
+Euphorbia sp.,Sarcophaga sp.,Sarcophagidae,Diptera,0.3000
+Euphorbia paralias,Sarcophaga sp.,Sarcophagidae,Diptera,0.3000
+Euphorbia paralias,Sarcophaga sp.,Sarcophagidae,Diptera,0.1000
+Eryngium maritimum,Sarcophaga sp.,Sarcophagidae,Diptera,0.4000
+Eryngium maritimum,Sarcophaga sp.,Sarcophagidae,Diptera,0.3000
+Cakile maritima,Syritta pipiens,Syrphidae,Diptera,0.1000
+Lobularia maritima,Dolycoris baccarum ,Pentatomidae,Hemiptera,0.0909
+Crucianella maritima,Dicranocephalus agilis,Stenocephalidae,Hemiptera,0.1000
+Echium plantagineum,Andrena ovatula ,Andrenidae,Hymenoptera,3.6269
+Echium plantagineum,Andrena ovatula ,Andrenidae,Hymenoptera,0.2000
+Cakile maritima,Andrena ovatula ,Andrenidae,Hymenoptera,0.2000
+Reichardia tingitana,Andrena sp.,Andrenidae,Hymenoptera,0.1000
+Echium plantagineum,Amegilla quadrifasciata,Apidae,Hymenoptera,0.1000
+Echium plantagineum,Amegilla quadrifasciata,Apidae,Hymenoptera,0.3000
+Echium plantagineum,Anthophora plumipes,Apidae,Hymenoptera,3.9149
+Echium plantagineum,Anthophora sp.,Apidae,Hymenoptera,0.0333
+Echium plantagineum,Anthophora sp.,Apidae,Hymenoptera,0.0250
+Echium plantagineum,Anthophora sp.,Apidae,Hymenoptera,0.2000
+Echium plantagineum,Anthophora sp.,Apidae,Hymenoptera,0.5000
+Echium plantagineum,Anthophora sp.,Apidae,Hymenoptera,0.8000
+Echium plantagineum,Anthophora sp.,Apidae,Hymenoptera,0.3000
+Echium plantagineum,Anthophora sp.,Apidae,Hymenoptera,0.2000
+Lotus cytisoides,Anthophora sp.,Apidae,Hymenoptera,0.2000
+Lotus cytisoides,Anthophora sp.,Apidae,Hymenoptera,0.2000
+Echium plantagineum,Anthophora sp.,Apidae,Hymenoptera,0.3600
+Scabiosa atropurpurea,Anthophora sp.,Apidae,Hymenoptera,0.3000
+Echium plantagineum,Anthophora sp.,Apidae,Hymenoptera,1.0133
+Echium plantagineum,Anthophora subterranea,Apidae,Hymenoptera,0.5000
+Echium plantagineum,Anthophora subterranea,Apidae,Hymenoptera,0.4000
+Echium plantagineum,Anthophora subterranea,Apidae,Hymenoptera,0.5454
+Echium plantagineum,Anthophora subterranea,Apidae,Hymenoptera,3.8178
+Echium plantagineum,Anthophora subterranea,Apidae,Hymenoptera,1.6362
+Echium plantagineum,Anthophora subterranea,Apidae,Hymenoptera,2.1532
+Echium plantagineum,Anthophora subterranea,Apidae,Hymenoptera,0.2667
+Echium plantagineum,Anthophora subterranea,Apidae,Hymenoptera,3.2000
+Lotus cytisoides,Anthophora subterranea,Apidae,Hymenoptera,0.5200
+Lotus cytisoides,Anthophora subterranea,Apidae,Hymenoptera,0.3690
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,0.2000
+Echium plantagineum,Apis mellifera,Apidae,Hymenoptera,2.6000
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,1.0000
+Echium plantagineum,Apis mellifera,Apidae,Hymenoptera,1.5000
+Echium plantagineum,Apis mellifera,Apidae,Hymenoptera,0.3000
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,3.7156
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,0.1281
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,1.4094
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,0.1281
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,1.2000
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,1.0323
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,0.3900
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,2.8600
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,0.1300
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,0.9840
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,0.2000
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,0.4000
+Echium plantagineum,Apis mellifera,Apidae,Hymenoptera,2.0000
+Echium plantagineum,Apis mellifera,Apidae,Hymenoptera,1.3000
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,1.7000
+Echium plantagineum,Apis mellifera,Apidae,Hymenoptera,1.6000
+Echium plantagineum,Apis mellifera,Apidae,Hymenoptera,0.6000
+Scabiosa atropurpurea,Apis mellifera,Apidae,Hymenoptera,0.4000
+Echium plantagineum,Apis mellifera,Apidae,Hymenoptera,1.1000
+Echium plantagineum,Apis mellifera,Apidae,Hymenoptera,1.0000
+Scabiosa atropurpurea,Apis mellifera,Apidae,Hymenoptera,0.9000
+Echium plantagineum,Apis mellifera,Apidae,Hymenoptera,2.5000
+Echium plantagineum,Apis mellifera,Apidae,Hymenoptera,0.7000
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,0.3000
+Echium plantagineum,Apis mellifera,Apidae,Hymenoptera,0.8000
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,1.2000
+Echium plantagineum,Apis mellifera,Apidae,Hymenoptera,3.2400
+Echium plantagineum,Apis mellifera,Apidae,Hymenoptera,3.1667
+Eryngium maritimum,Colletes sp.,Colletidae,Hymenoptera,0.1000
+Cakile maritima,Colletes sp.,Colletidae,Hymenoptera,0.3000
+Cakile maritima,Colletes sp.,Colletidae,Hymenoptera,0.5000
+Cakile maritima,Colletes sp.,Colletidae,Hymenoptera,0.1000
+Euphorbia sp.,Hylaeus sp. ,Colletidae,Hymenoptera,0.3000
+Cakile maritima,Hylaeus taeniolatus,Colletidae,Hymenoptera,0.3000
+Reichardia tingitana,Tapinoma nigerrinum,Formicidae,Hymenoptera,0.1000
+Scabiosa atropurpurea,Halictus fulvipes,Halictidae,Hymenoptera,0.1000
+Lobularia maritima,Halictus gemmeus,Halictidae,Hymenoptera,1.9091
+Lobularia maritima,Halictus gemmeus,Halictidae,Hymenoptera,1.0000
+Euphorbia sp.,Halictus gemmeus,Halictidae,Hymenoptera,0.1333
+Centranthus calcitrapae,Halictus gemmeus,Halictidae,Hymenoptera,0.3000
+Scabiosa atropurpurea,Halictus gemmeus,Halictidae,Hymenoptera,0.4000
+Teucrium marum,Halictus scabiosae,Halictidae,Hymenoptera,1.0000
+Eryngium maritimum,Halictus scabiosae,Halictidae,Hymenoptera,0.4000
+Eryngium maritimum,Halictus scabiosae,Halictidae,Hymenoptera,0.3000
+Scabiosa atropurpurea,Halictus sp.,Halictidae,Hymenoptera,0.5000
+Cakile maritima,Lasioglossum nitidulum,Halictidae,Hymenoptera,0.9091
+Cakile maritima,Lasioglossum nitidulum,Halictidae,Hymenoptera,1.5455
+Cakile maritima,Lasioglossum nitidulum,Halictidae,Hymenoptera,0.8000
+Cakile maritima,Lasioglossum nitidulum,Halictidae,Hymenoptera,0.5000
+Cakile maritima,Lasioglossum nitidulum,Halictidae,Hymenoptera,1.7000
+Cakile maritima,Lasioglossum nitidulum,Halictidae,Hymenoptera,0.7000
+Eryngium maritimum,Lasioglossum sp.,Halictidae,Hymenoptera,0.1000
+Echium plantagineum,Anthidium florentinum ,Megachilidae,Hymenoptera,0.3000
+Reichardia tingitana,Anthidium florentinum ,Megachilidae,Hymenoptera,0.1000
+Scabiosa atropurpurea,Anthidium florentinum ,Megachilidae,Hymenoptera,0.1000
+Echium plantagineum,Anthidium manicatum,Megachilidae,Hymenoptera,0.2000
+Echium plantagineum,Chalicodoma sicula,Megachilidae,Hymenoptera,0.5964
+Echium plantagineum,Megachile sicula,Megachilidae,Hymenoptera,0.1000
+Lotus cytisoides,Megachile sicula,Megachilidae,Hymenoptera,0.3871
+Crucianella maritima,Megachile sicula,Megachilidae,Hymenoptera,0.1364
+Eryngium maritimum,Megachile sp.,Megachilidae,Hymenoptera,0.2000
+Echium plantagineum,Osmia caerulescens ,Megachilidae,Hymenoptera,0.7000
+Echium plantagineum,Osmia caerulescens ,Megachilidae,Hymenoptera,2.2364
+Echium plantagineum,Osmia latreillei,Megachilidae,Hymenoptera,0.1000
+Cakile maritima,Dipogon variegatus,Pompilidae,Hymenoptera,0.4545
+Euphorbia paralias,Ancistrocerus longispinosus,Vespidae,Hymenoptera,0.1000
+Cakile maritima,Ancistrocerus longispinosus,Vespidae,Hymenoptera,0.2000
+Lotus cytisoides,Polistes dominula,Vespidae,Hymenoptera,0.3000
+Euphorbia sp.,Polistes dominula,Vespidae,Hymenoptera,1.2000
+Euphorbia paralias,Polistes dominula,Vespidae,Hymenoptera,0.1000
+Euphorbia paralias,Polistes dominula,Vespidae,Hymenoptera,0.2000
+Euphorbia sp.,Polistes dominula,Vespidae,Hymenoptera,0.6000
+Euphorbia sp.,Polistes dominula,Vespidae,Hymenoptera,0.3000
+Echium plantagineum,Polistes dominula,Vespidae,Hymenoptera,1.3200
+Echium plantagineum,Polistes gallicus,Vespidae,Hymenoptera,0.2000
+Teucrium marum,Polistes sp.,Vespidae,Hymenoptera,0.6000
+Eryngium maritimum,Polistes sp.,Vespidae,Hymenoptera,0.1000
+Teucrium marum,Aricia cramera,Lycaenidae,Lepidoptera,0.3000
+Echium plantagineum,Polyommatus celina,Lycaenidae,Lepidoptera,0.1000
+Echium plantagineum,Polyommatus celina,Lycaenidae,Lepidoptera,0.2667
+Lotus cytisoides,Polyommatus celina,Lycaenidae,Lepidoptera,0.2600
+Eryngium maritimum,Polyommatus celina,Lycaenidae,Lepidoptera,0.3000
+Lotus cytisoides,Polyommatus celina,Lycaenidae,Lepidoptera,0.1000
+Cakile maritima,Polyommatus celina,Lycaenidae,Lepidoptera,0.1000
+Cakile maritima,Polyommatus celina,Lycaenidae,Lepidoptera,0.3000
+Cakile maritima,Polyommatus celina,Lycaenidae,Lepidoptera,0.1000
+Eryngium maritimum,Polyommatus celina,Lycaenidae,Lepidoptera,0.1000
+Eryngium maritimum,Polyommatus celina,Lycaenidae,Lepidoptera,0.1000
+Echium plantagineum,Autographa gamma,Noctuidae,Lepidoptera,0.1000
+Scabiosa atropurpurea,Coenonympha pamphilus,Nymphalidae,Lepidoptera,0.1000
+Scabiosa atropurpurea,Coenonympha pamphilus,Nymphalidae,Lepidoptera,0.1000
+Teucrium marum,Coenonympha pamphilus,Nymphalidae,Lepidoptera,0.3000
+Teucrium marum,Pyronia cecilia,Nymphalidae,Lepidoptera,0.3000
+Reichardia tingitana,Vanessa cardui,Nymphalidae,Lepidoptera,0.1000
+Reichardia tingitana,Colias crocea,Pieridae,Lepidoptera,0.2647
+Echium plantagineum,Colias crocea,Pieridae,Lepidoptera,0.2000
+Reichardia tingitana,Colias crocea,Pieridae,Lepidoptera,0.3000
+Reichardia tingitana,Colias crocea,Pieridae,Lepidoptera,0.4000
+Scabiosa atropurpurea,Gonepteryx cleopatra,Pieridae,Lepidoptera,0.2000
+Cakile maritima,Pieris rapae,Pieridae,Lepidoptera,0.1000
+Teucrium marum,Pontia daplidice,Pieridae,Lepidoptera,0.6000
+Cakile maritima,Pontia daplidice,Pieridae,Lepidoptera,0.2000
+Cakile maritima,Pontia daplidice,Pieridae,Lepidoptera,0.6000
+Cakile maritima,Pontia daplidice,Pieridae,Lepidoptera,1.1000
+Echium plantagineum,Macroglossum stellatarum,Sphingidae,Lepidoptera,3.8667
+Echium plantagineum,Macroglossum stellatarum,Sphingidae,Lepidoptera,0.1000
+Euphorbia sp.,Thryps sp.,Thripidae,Thysanoptera,0.7486
+Euphorbia sp.,Thryps sp.,Thripidae,Thysanoptera,0.6316

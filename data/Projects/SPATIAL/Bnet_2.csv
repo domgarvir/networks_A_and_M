@@ -1,0 +1,300 @@
+Plant_sp,Visitor_sp,Family,Order,FVR
+Calystegia soldanella,Balaustium sp.,Erythraeidae,Arachnida,0.1000
+Clematis flammula,Notoxus monoceros,Anthicidae,Coleoptera,0.2500
+Clematis flammula,Notoxus monoceros,Anthicidae,Coleoptera,0.7500
+Eryngium maritimum,Stenopterus rufus,Cerambycidae,Coleoptera,0.2000
+Eryngium maritimum,Stenopterus rufus,Cerambycidae,Coleoptera,0.2000
+Eryngium maritimum,Stenopterus rufus,Cerambycidae,Coleoptera,0.2000
+Eryngium maritimum,Oxythyrea funesta,Cetoniidae,Coleoptera,0.2000
+Eryngium maritimum,Oxythyrea funesta,Cetoniidae,Coleoptera,0.0500
+Limonium sp.,Oxythyrea funesta,Cetoniidae,Coleoptera,0.3000
+Tamarix sp.,Paroxyonyx cinctus,Curculionidae,Coleoptera,0.0500
+Cakile maritima,Dasytes nigroaeneus ,Dasytidae,Coleoptera,0.1000
+Euphorbia paralias,Ebaeus sp.,Malachiidae,Coleoptera,0.1000
+Sonchus sp.,Ebaeus sp.,Malachiidae,Coleoptera,0.1000
+Sonchus sp.,Psilothrix aureola ,Melyridae,Coleoptera,0.6571
+Sonchus sp.,Psilothrix cyaneus,Melyridae,Coleoptera,0.2000
+Lotus cytisoides,Psilothrix cyaneus,Melyridae,Coleoptera,0.7000
+Sonchus sp.,Psilothrix cyaneus,Melyridae,Coleoptera,0.1000
+Sonchus sp.,Psilothrix cyaneus,Melyridae,Coleoptera,0.3000
+Sonchus sp.,Psilothrix cyaneus,Melyridae,Coleoptera,0.1000
+Scrophularia canina,Psilothrix cyaneus,Melyridae,Coleoptera,0.1000
+Scabiosa atropurpurea,Psilothrix cyaneus,Melyridae,Coleoptera,0.1000
+Helichrysum stoechas,Psilothrix cyaneus,Melyridae,Coleoptera,0.8591
+Helichrysum stoechas,Psilothrix cyaneus,Melyridae,Coleoptera,0.6400
+Sonchus sp.,Psilothrix viridicoerulea,Melyridae,Coleoptera,0.9857
+Eryngium maritimum,Psilothrix viridicoerulea,Melyridae,Coleoptera,0.1000
+Clematis flammula,Mordellistena sp.,Mordellidae,Coleoptera,0.2500
+Helichrysum stoechas,Variimorda villosa,Mordellidae,Coleoptera,1.7067
+Sonchus sp.,Meligethes sp.,Nitidulidae,Coleoptera,0.3286
+Helichrysum stoechas,Oedemera barbara,Oedemeridae,Coleoptera,0.1000
+Calystegia soldanella,Oedemera barbara,Oedemeridae,Coleoptera,0.1000
+Helichrysum stoechas,Oedemera barbara,Oedemeridae,Coleoptera,0.5000
+Helichrysum stoechas,Oedemera barbara,Oedemeridae,Coleoptera,0.4167
+Helichrysum stoechas,Oedemera barbara,Oedemeridae,Coleoptera,0.3000
+Helichrysum stoechas,Oedemera flavipes,Oedemeridae,Coleoptera,0.1000
+Helichrysum stoechas,Olibrus sp.,Phalacridae,Coleoptera,1.4000
+Medicago maritima,Olibrus sp.,Phalacridae,Coleoptera,0.6000
+Helichrysum stoechas,Olibrus sp.,Phalacridae,Coleoptera,0.1227
+Cakile maritima,Stilbum cyanurum,Phalacridae,Coleoptera,0.2000
+Cakile maritima,Stilbum cyanurum,Phalacridae,Coleoptera,1.1940
+Euphorbia paralias,Stilbum cyanurum,Phalacridae,Coleoptera,0.2000
+Clematis flammula,Stilbum cyanurum,Phalacridae,Coleoptera,0.7000
+Clematis flammula,Stilbum cyanurum,Phalacridae,Coleoptera,12.2500
+Glaucium flavum,Tropinota squalida,Scarabaeidae,Coleoptera,0.1000
+Tamarix sp.,Anaspis sp.  ,Scraptiidae,Coleoptera,0.0500
+Helichrysum stoechas,Bombylius cinerascens ,Bombyliidae,Diptera,0.9000
+Helichrysum stoechas,Bombylius cinerascens ,Bombyliidae,Diptera,0.5000
+Reichardia tingitana,Exoprosopa italica,Bombyliidae,Diptera,0.2222
+Cakile maritima,Exoprosopa italica,Bombyliidae,Diptera,2.0000
+Cakile maritima,Exoprosopa italica,Bombyliidae,Diptera,1.0000
+Cakile maritima,Exoprosopa italica,Bombyliidae,Diptera,5.5000
+Cakile maritima,Exoprosopa italica,Bombyliidae,Diptera,0.1000
+Helichrysum stoechas,Exoprosopa italica,Bombyliidae,Diptera,0.9818
+Scrophularia canina,Lucilia sericata,Calliphoridae,Diptera,0.1000
+Eryngium maritimum,Lucilia sericata,Calliphoridae,Diptera,0.1000
+Eryngium maritimum,Stomorhina lunata,Calliphoridae,Diptera,0.1000
+Eryngium maritimum,Stomorhina lunata,Calliphoridae,Diptera,0.1000
+Eryngium maritimum,Stomorhina lunata,Calliphoridae,Diptera,0.1000
+Eryngium maritimum,Stomorhina lunata,Calliphoridae,Diptera,0.8000
+Sonchus tenerrimus,Stomorhina lunata,Calliphoridae,Diptera,0.1000
+Reichardia tingitana,Clinocera sp. ,Empididae,Diptera,0.2000
+Helichrysum stoechas,Wiedemannia sp.,Empididae,Diptera,1.3500
+Sonchus sp.,Hybotidae sp.,Hybotidae,Diptera,0.3286
+Euphorbia paralias,Dasyphora albofasciata,Muscidae,Diptera,0.4800
+Scrophularia canina,Dasyphora albofasciata,Muscidae,Diptera,0.1000
+Cakile maritima,Helina reversio,Muscidae,Diptera,0.1000
+Centranthus calcitrapae,Helina reversio,Muscidae,Diptera,0.3000
+Lotus cytisoides,Musca autumnalis,Muscidae,Diptera,0.1000
+Lotus cytisoides,Muscidae sp.,Muscidae,Diptera,0.1000
+Calystegia soldanella,Pyrellia vivida,Muscidae,Diptera,0.3000
+Calystegia soldanella,Pyrellia vivida,Muscidae,Diptera,0.1000
+Helichrysum stoechas,Stomoxys calcitrans,Muscidae,Diptera,4.0500
+Helichrysum stoechas,Stomoxys calcitrans,Muscidae,Diptera,1.9200
+Limonium sp.,Stomoxys calcitrans,Muscidae,Diptera,0.1000
+Sonchus tenerrimus,Muscidae sp.,Sarcophagidae,Diptera,0.1000
+Euphorbia paralias,Sarcophaga sp.,Sarcophagidae,Diptera,0.7200
+Sonchus sp.,Sarcophaga sp.,Sarcophagidae,Diptera,0.1000
+Calystegia soldanella,Sarcophaga sp.,Sarcophagidae,Diptera,0.1000
+Euphorbia paralias,Sarcophaga sp.,Sarcophagidae,Diptera,0.1000
+Cakile maritima,Sarcophaga sp.,Sarcophagidae,Diptera,0.2000
+Eryngium maritimum,Sarcophaga sp.,Sarcophagidae,Diptera,0.4000
+Centranthus calcitrapae,Sarcophaga sp.,Sarcophagidae,Diptera,0.2000
+Centranthus calcitrapae,Sarcophaga sp.,Sarcophagidae,Diptera,0.1000
+Scrophularia canina,Sarcophaga sp.,Sarcophagidae,Diptera,0.1891
+Eryngium maritimum,Eristalinus sepulchlaris,Syrphidae,Diptera,0.1000
+Eryngium maritimum,Eristalis similis,Syrphidae,Diptera,0.3500
+Eryngium maritimum,Eristalis similis,Syrphidae,Diptera,0.3000
+Eryngium maritimum,Eristalis similis,Syrphidae,Diptera,0.3000
+Cakile maritima,Eristalis tenax,Syrphidae,Diptera,0.1467
+Eryngium maritimum,Eristalis tenax,Syrphidae,Diptera,2.0000
+Eryngium maritimum,Eristalis tenax,Syrphidae,Diptera,0.4000
+Eryngium maritimum,Eristalis tenax,Syrphidae,Diptera,0.5500
+Eryngium maritimum,Eristalis tenax,Syrphidae,Diptera,0.6000
+Helichrysum stoechas,Eristalis tenax,Syrphidae,Diptera,0.4000
+Cakile maritima,Melanogaster aerosa,Syrphidae,Diptera,0.3000
+Euphorbia paralias,Paragus strigatus,Syrphidae,Diptera,0.2400
+Euphorbia paralias,Sphaerophoria interrupta,Syrphidae,Diptera,0.2000
+Scrophularia canina,Sphaerophoria scripta ,Syrphidae,Diptera,0.9000
+Scrophularia canina,Sphaerophoria scripta ,Syrphidae,Diptera,0.2000
+Euphorbia paralias,Sphaerophoria sp. ,Syrphidae,Diptera,0.4800
+Scrophularia canina,Sphaerophoria taeniata,Syrphidae,Diptera,1.6000
+Euphorbia paralias,Sphaerophoria taeniata,Syrphidae,Diptera,0.1000
+Cakile maritima,Syritta flaviventris,Syrphidae,Diptera,0.6000
+Euphorbia paralias,Syritta pipiens,Syrphidae,Diptera,1.2000
+Eryngium maritimum,Syritta pipiens,Syrphidae,Diptera,1.1000
+Euphorbia paralias,Syritta pipiens,Syrphidae,Diptera,0.9000
+Eryngium maritimum,Syritta pipiens,Syrphidae,Diptera,0.1000
+Eryngium maritimum,Syritta pipiens,Syrphidae,Diptera,0.4000
+Lotus cytisoides,Hyalesthes scotti,Cixiidae,Hemiptera,0.2526
+Centranthus calcitrapae,Capsodes lineolatus ,Miridae,Hemiptera,0.1000
+Centranthus calcitrapae,Capsodes lineolatus ,Miridae,Hemiptera,0.1000
+Helichrysum stoechas,Deraeocoris pratensis,Miridae,Hemiptera,0.3682
+Medicago maritima,Horistus orientalis,Miridae,Hemiptera,0.1000
+Medicago maritima,Horistus orientalis,Miridae,Hemiptera,1.2000
+Helichrysum stoechas,Horistus orientalis,Miridae,Hemiptera,0.1000
+Lotus cytisoides,Horistus orientalis,Miridae,Hemiptera,0.0909
+Helichrysum stoechas,Miridae sp.,Miridae,Hemiptera,0.1227
+Calystegia soldanella,Andrena ovatula ,Andrenidae,Hymenoptera,0.4000
+Eryngium maritimum,Andrena ovatula ,Andrenidae,Hymenoptera,1.1000
+Scabiosa atropurpurea,Andrena ovatula ,Andrenidae,Hymenoptera,0.4000
+Glaucium flavum,Andrena ovatula ,Andrenidae,Hymenoptera,0.3000
+Lotus cytisoides,Andrena sp.,Andrenidae,Hymenoptera,1.0000
+Eryngium maritimum,Andrena sp.,Andrenidae,Hymenoptera,0.5000
+Cakile maritima,Amegilla quadrifasciata,Apidae,Hymenoptera,3.0000
+Calystegia soldanella,Anthophora balearica,Apidae,Hymenoptera,0.2000
+Tamarix sp.,Anthophora sp.,Apidae,Hymenoptera,0.2000
+Tamarix sp.,Apis mellifera,Apidae,Hymenoptera,160.0000
+Tamarix sp.,Apis mellifera,Apidae,Hymenoptera,80.0000
+Tamarix sp.,Apis mellifera,Apidae,Hymenoptera,5.0000
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,1.6000
+Rosmarinus officinalis,Apis mellifera,Apidae,Hymenoptera,10.0800
+Rosmarinus officinalis,Apis mellifera,Apidae,Hymenoptera,1.1200
+Rosmarinus officinalis,Apis mellifera,Apidae,Hymenoptera,2.5200
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,0.7579
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,0.3789
+Medicago maritima,Apis mellifera,Apidae,Hymenoptera,0.8000
+Lotus cytisoides,Apis mellifera,Apidae,Hymenoptera,1.2000
+Helichrysum stoechas,Apis mellifera,Apidae,Hymenoptera,0.1000
+Calystegia soldanella,Apis mellifera,Apidae,Hymenoptera,0.1000
+Calystegia soldanella,Apis mellifera,Apidae,Hymenoptera,1.6000
+Cakile maritima,Apis mellifera,Apidae,Hymenoptera,1.1000
+Tamarix sp.,Apis mellifera,Apidae,Hymenoptera,4.5000
+Tamarix sp.,Apis mellifera,Apidae,Hymenoptera,5.5000
+Helichrysum stoechas,Apis mellifera,Apidae,Hymenoptera,1.0000
+Calystegia soldanella,Apis mellifera,Apidae,Hymenoptera,0.1000
+Calystegia soldanella,Apis mellifera,Apidae,Hymenoptera,0.6000
+Calystegia soldanella,Apis mellifera,Apidae,Hymenoptera,0.9000
+Helichrysum stoechas,Apis mellifera,Apidae,Hymenoptera,1.0000
+Tamarix sp.,Apis mellifera,Apidae,Hymenoptera,0.5500
+Tamarix sp.,Apis mellifera,Apidae,Hymenoptera,0.5000
+Tamarix sp.,Apis mellifera,Apidae,Hymenoptera,0.6000
+Tamarix sp.,Apis mellifera,Apidae,Hymenoptera,0.4500
+Tamarix sp.,Apis mellifera,Apidae,Hymenoptera,1.1500
+Tamarix sp.,Apis mellifera,Apidae,Hymenoptera,0.3500
+Clematis flammula,Apis mellifera,Apidae,Hymenoptera,0.0500
+Cakile maritima,Bombus terrestris,Apidae,Hymenoptera,3.0000
+Cakile maritima,Bombus terrestris,Apidae,Hymenoptera,13.3929
+Cakile maritima,Bombus terrestris,Apidae,Hymenoptera,10.0000
+Cakile maritima,Bombus terrestris,Apidae,Hymenoptera,7.3333
+Cakile maritima,Bombus terrestris,Apidae,Hymenoptera,7.3333
+Cakile maritima,Bombus terrestris,Apidae,Hymenoptera,5.5000
+Cakile maritima,Bombus terrestris,Apidae,Hymenoptera,5.5000
+Cakile maritima,Bombus terrestris,Apidae,Hymenoptera,5.5000
+Cakile maritima,Bombus terrestris,Apidae,Hymenoptera,5.5000
+Cakile maritima,Bombus terrestris,Apidae,Hymenoptera,5.5000
+Eryngium maritimum,Bombus terrestris,Apidae,Hymenoptera,5.5000
+Eryngium maritimum,Bombus terrestris,Apidae,Hymenoptera,1.2000
+Eryngium maritimum,Bombus terrestris,Apidae,Hymenoptera,0.5000
+Scabiosa atropurpurea,Bombus terrestris,Apidae,Hymenoptera,0.8000
+Eryngium maritimum,Eucera sp.,Apidae,Hymenoptera,0.1000
+Eryngium maritimum,Eucera sp.,Apidae,Hymenoptera,0.8000
+Eryngium maritimum,Bembix oculata,Cabronidae,Hymenoptera,1.7000
+Eryngium maritimum,Bembix oculata,Cabronidae,Hymenoptera,1.5000
+Eryngium maritimum,Bembix oculata,Cabronidae,Hymenoptera,0.6000
+Eryngium maritimum,Bembix oculata,Cabronidae,Hymenoptera,0.3500
+Eryngium maritimum,Bembix oculata,Cabronidae,Hymenoptera,0.5000
+Eryngium maritimum,Stilbum cyanurum,Chrysididae,Hymenoptera,0.4000
+Eryngium maritimum,Stilbum cyanurum,Chrysididae,Hymenoptera,0.2000
+Eryngium maritimum,Stilbum cyanurum,Chrysididae,Hymenoptera,0.2000
+Eryngium maritimum,Stilbum cyanurum,Chrysididae,Hymenoptera,0.2000
+Eryngium maritimum,Stilbum cyanurum,Chrysididae,Hymenoptera,0.5000
+Glaucium flavum,Colletes abeillei,Colletidae,Hymenoptera,0.3000
+Glaucium flavum,Colletes abeillei,Colletidae,Hymenoptera,0.5000
+Eryngium maritimum,Colletes gallicus ,Colletidae,Hymenoptera,0.6000
+Helichrysum stoechas,Hylaeus annularis,Colletidae,Hymenoptera,0.2133
+Euphorbia paralias,Hylaeus sp. ,Colletidae,Hymenoptera,0.2400
+Helichrysum stoechas,Hylaeus taeniolatus,Colletidae,Hymenoptera,0.5833
+Daucus carota,Hylaeus taeniolatus,Colletidae,Hymenoptera,0.1000
+Helichrysum stoechas,Hylaeus taeniolatus,Colletidae,Hymenoptera,0.8000
+Euphorbia paralias,Hylaeus taeniolatus,Colletidae,Hymenoptera,1.4000
+Eryngium maritimum,Philanthus triangulum,Crabronidae,Hymenoptera,3.0000
+Eryngium maritimum,Philanthus triangulum,Crabronidae,Hymenoptera,0.3000
+Eryngium maritimum,Philanthus triangulum,Crabronidae,Hymenoptera,2.0000
+Eryngium maritimum,Philanthus triangulum,Crabronidae,Hymenoptera,1.0000
+Eryngium maritimum,Philanthus triangulum,Crabronidae,Hymenoptera,1.2000
+Eryngium maritimum,Philanthus triangulum,Crabronidae,Hymenoptera,0.1000
+Eryngium maritimum,Philanthus triangulum,Crabronidae,Hymenoptera,0.2000
+Eryngium maritimum,Philanthus triangulum,Crabronidae,Hymenoptera,0.2000
+Euphorbia paralias,Eumenes coarctatus ,Eumenidae,Hymenoptera,0.7000
+Calystegia soldanella,Tapinoma nigerrinum,Formicidae,Hymenoptera,0.2000
+Helichrysum stoechas,Tapinoma nigerrinum,Formicidae,Hymenoptera,0.2455
+Helichrysum stoechas,Tapinoma nigerrinum,Formicidae,Hymenoptera,0.8533
+Clematis flammula,Tapinoma nigerrinum,Formicidae,Hymenoptera,0.2500
+Cakile maritima,Halictus fulvipes,Halictidae,Hymenoptera,1.0000
+Cakile maritima,Halictus fulvipes,Halictidae,Hymenoptera,1.0000
+Cakile maritima,Halictus fulvipes,Halictidae,Hymenoptera,3.0000
+Cakile maritima,Halictus fulvipes,Halictidae,Hymenoptera,3.0000
+Eryngium maritimum,Halictus gemmeus,Halictidae,Hymenoptera,0.6000
+Eryngium maritimum,Halictus gemmeus,Halictidae,Hymenoptera,0.1000
+Cakile maritima,Halictus microcardia ,Halictidae,Hymenoptera,0.2000
+Cakile maritima,Halictus microcardia ,Halictidae,Hymenoptera,0.6823
+Reichardia tingitana,Lasioglossum albocinctum ,Halictidae,Hymenoptera,0.2222
+Reichardia tingitana,Lasioglossum albocinctum ,Halictidae,Hymenoptera,0.6667
+Reichardia tingitana,Lasioglossum albocinctum ,Halictidae,Hymenoptera,0.5556
+Glaucium flavum,Lasioglossum malachurum,Halictidae,Hymenoptera,0.3000
+Scrophularia canina,Lasioglossum nitidulum,Halictidae,Hymenoptera,11.7000
+Cakile maritima,Lasioglossum sp.,Halictidae,Hymenoptera,0.5867
+Eryngium maritimum,Lasioglossum sp.,Halictidae,Hymenoptera,0.3000
+Scrophularia canina,Lasioglossum sp.,Halictidae,Hymenoptera,0.3781
+Scrophularia canina,Lasioglossum sp.,Halictidae,Hymenoptera,0.9000
+Scrophularia canina,Lasioglossum sp.,Halictidae,Hymenoptera,1.0000
+Euphorbia paralias,Lasioglossum sp.,Halictidae,Hymenoptera,0.9000
+Tamarix sp.,Lasioglossum sp.,Halictidae,Hymenoptera,0.1500
+Eryngium maritimum,Megachile leachella ,Megachilidae,Hymenoptera,0.4000
+Lotus cytisoides,Megachile sicula,Megachilidae,Hymenoptera,0.2526
+Lotus cytisoides,Megachile sicula,Megachilidae,Hymenoptera,0.5053
+Lotus cytisoides,Megachile sicula,Megachilidae,Hymenoptera,1.0000
+Lotus cytisoides,Megachile sicula,Megachilidae,Hymenoptera,1.0000
+Rosmarinus officinalis,Megachile sicula,Megachilidae,Hymenoptera,0.2000
+Lotus cytisoides,Megachile sicula,Megachilidae,Hymenoptera,0.4000
+Lotus cytisoides,Megachile sicula,Megachilidae,Hymenoptera,1.1000
+Lotus cytisoides,Megachile sicula,Megachilidae,Hymenoptera,0.2308
+Cakile maritima,Megachile sp.,Megachilidae,Hymenoptera,1.2000
+Cakile maritima,Megachile sp.,Megachilidae,Hymenoptera,1.6071
+Scabiosa atropurpurea,Osmia ligurica,Megachilidae,Hymenoptera,0.3000
+Calystegia soldanella,Rhodanthidium septemdentatum,Megachilidae,Hymenoptera,0.1000
+Calystegia soldanella,Rhodanthidium septemdentatum,Megachilidae,Hymenoptera,0.1000
+Calystegia soldanella,Rhodanthidium septemdentatum,Megachilidae,Hymenoptera,0.1000
+Calystegia soldanella,Rhodanthidium septemdentatum,Megachilidae,Hymenoptera,0.2000
+Euphorbia paralias,Entomobora fuscipennis ,Pompilidae,Hymenoptera,0.7200
+Eryngium maritimum,Entomobora fuscipennis ,Pompilidae,Hymenoptera,0.1000
+Calystegia soldanella,Dasyscolia ciliata,Scoliidae,Hymenoptera,0.3000
+Scabiosa atropurpurea,Dasyscolia ciliata,Scoliidae,Hymenoptera,0.1000
+Eryngium maritimum,Prionyx viduatus ,Sphecidae,Hymenoptera,0.3000
+Sonchus sp.,Sphex funerarius ,Sphecidae,Hymenoptera,0.1000
+Sonchus sp.,Sphex funerarius ,Sphecidae,Hymenoptera,0.1000
+Helichrysum stoechas,Ancistrocerus gazella,Vespidae,Hymenoptera,0.3077
+Scrophularia canina,Ancistrocerus sp.,Vespidae,Hymenoptera,0.1000
+Helichrysum stoechas,Ancistrocerus sp.,Vespidae,Hymenoptera,0.3000
+Limonium sp.,Ancistrocerus sp.,Vespidae,Hymenoptera,0.4000
+Helichrysum stoechas,Polistes dominula,Vespidae,Hymenoptera,0.2000
+Scrophularia canina,Polistes dominula,Vespidae,Hymenoptera,4.4000
+Cakile maritima,Polistes dominula,Vespidae,Hymenoptera,0.6000
+Eryngium maritimum,Polistes dominula,Vespidae,Hymenoptera,2.0000
+Eryngium maritimum,Polistes dominula,Vespidae,Hymenoptera,0.1000
+Eryngium maritimum,Polistes dominula,Vespidae,Hymenoptera,0.4000
+Scrophularia canina,Polistes dominula,Vespidae,Hymenoptera,3.0563
+Scrophularia canina,Polistes dominula,Vespidae,Hymenoptera,1.0398
+Scrophularia canina,Polistes dominula,Vespidae,Hymenoptera,0.1000
+Euphorbia paralias,Polistes dominula,Vespidae,Hymenoptera,0.8000
+Scrophularia canina,Polistes dominula,Vespidae,Hymenoptera,0.2600
+Helichrysum stoechas,Polistes dominula,Vespidae,Hymenoptera,0.4909
+Euphorbia paralias,Polistes gallicus,Vespidae,Hymenoptera,1.2000
+Cakile maritima,Polistes sp.,Vespidae,Hymenoptera,0.8000
+Helichrysum stoechas,Polistes sp.,Vespidae,Hymenoptera,0.1000
+Euphorbia paralias,Polistes sp.,Vespidae,Hymenoptera,0.5000
+Eryngium maritimum,Polistes sp.,Vespidae,Hymenoptera,1.1000
+Eryngium maritimum,Polistes sp.,Vespidae,Hymenoptera,0.2000
+Euphorbia paralias,Polistes sp.,Vespidae,Hymenoptera,0.1000
+Eryngium maritimum,Polistes sp.,Vespidae,Hymenoptera,0.1000
+Eryngium maritimum,Polistes sp.,Vespidae,Hymenoptera,0.1000
+Eryngium maritimum,Polistes sp.,Vespidae,Hymenoptera,0.9000
+Scrophularia canina,Vespula germanica,Vespidae,Hymenoptera,0.4000
+Scrophularia canina,Vespula germanica,Vespidae,Hymenoptera,0.5000
+Eryngium maritimum,Aricia cramera,Lycaenidae,Lepidoptera,0.1000
+Lotus cytisoides,Polyommatus celina,Lycaenidae,Lepidoptera,0.1263
+Lotus cytisoides,Polyommatus celina,Lycaenidae,Lepidoptera,0.1000
+Cakile maritima,Polyommatus celina,Lycaenidae,Lepidoptera,0.1000
+Cakile maritima,Polyommatus celina,Lycaenidae,Lepidoptera,2.6786
+Cakile maritima,Polyommatus celina,Lycaenidae,Lepidoptera,0.8000
+Cakile maritima,Polyommatus celina,Lycaenidae,Lepidoptera,0.5867
+Cakile maritima,Polyommatus celina,Lycaenidae,Lepidoptera,0.3000
+Eryngium maritimum,Polyommatus celina,Lycaenidae,Lepidoptera,0.1000
+Eryngium maritimum,Polyommatus celina,Lycaenidae,Lepidoptera,0.1000
+Lotus cytisoides,Polyommatus celina,Lycaenidae,Lepidoptera,0.0769
+Eryngium maritimum,Polyommatus celina,Lycaenidae,Lepidoptera,0.1000
+Eryngium maritimum,Coenonympha pamphilus,Nymphalidae,Lepidoptera,0.1000
+Cakile maritima,Vanessa cardui,Nymphalidae,Lepidoptera,3.0000
+Cakile maritima,Vanessa cardui,Nymphalidae,Lepidoptera,0.2933
+Cakile maritima,Vanessa cardui,Nymphalidae,Lepidoptera,1.7600
+Helichrysum stoechas,Vanessa cardui,Nymphalidae,Lepidoptera,0.3000
+Calystegia soldanella,Gonepteryx cleopatra,Pieridae,Lepidoptera,0.1000
+Cakile maritima,Gonepteryx cleopatra,Pieridae,Lepidoptera,2.0000
+Cakile maritima,Gonepteryx cleopatra,Pieridae,Lepidoptera,0.4400
+Calystegia soldanella,Gonepteryx cleopatra,Pieridae,Lepidoptera,0.7000
+Helichrysum stoechas,Gonepteryx cleopatra,Pieridae,Lepidoptera,0.1000
+Scabiosa atropurpurea,Gonepteryx cleopatra,Pieridae,Lepidoptera,0.6000
+Cakile maritima,Pontia daplidice,Pieridae,Lepidoptera,0.6000
+Glaucium flavum,Macroglossum stellatarum,Sphingidae,Lepidoptera,0.3000
+Lotus cytisoides,Thryps sp.,Thripidae,Thysanoptera,0.1263
