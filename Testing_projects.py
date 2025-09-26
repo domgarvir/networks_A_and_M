@@ -295,7 +295,7 @@ network_names={
 "Bnet7":"Cala Tirant","Bnet8":"Salinas", "Bnet9":"Torre Fornells"
 }
 webs=["1","2","3","4","5","6","7","8","9"]
-web=[0] #from 1 to 9
+web=webs[0] #from 1 to 9
 #we load the networks one by one
 
 filename=my_path+"Bnet_"+web+".csv"
