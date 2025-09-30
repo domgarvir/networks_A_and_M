@@ -84,3 +84,22 @@ for rep in range(Nrep+1):
     #print(eta_R3)
     
 Value_df.head()
+
+# Calculate mean and std for each metric and ensemble
+model_stats_3 = Value_df.groupby('Ensemble').agg(['mean', 'std'])
+
+# Initialize z_scores DataFrame
+z_scores_df_3 = pd.DataFrame(index=['ER', 'CONF','KSEQ'], columns=['eta'])
+
+# Compute z-scores
+metric='eta'
+for ensemble in ['ER', 'CONF', 'KSEQ']:
+    mean_value = model_stats_3.loc[ensemble, (metric, 'mean')]
+    std_value = model_stats_3.loc[ensemble, (metric, 'std')]
+    empirical_value = eta_emp
+        
+    # Calculate z-score
+    z_score = (empirical_value - mean_value) / std_value if std_value != 0 else None
+    z_scores_df_3.loc[ensemble,'eta'] = z_score
+
+z_scores_df_3

@@ -33,3 +33,22 @@ for rep in range(5):
     Value_df.loc[(rep,"KSEQ"), : ]= Motifs_R3
     
 Value_df.head()
+
+# Calculate mean and std for each metric and ensemble
+model_stats_2 = Value_df.groupby('Ensemble').agg(['mean', 'std'])
+
+# Initialize z_scores DataFrame
+z_scores_df_2 = pd.DataFrame(index=['ER', 'KSEQ'], columns=['S1', 'S2','S3','S4','S5'])
+
+# Compute z-scores
+for metric in ['S1', 'S2','S3','S4','S5']:
+    for ensemble in ['ER', 'KSEQ']:
+        mean_value = model_stats_2.loc[ensemble, (metric, 'mean')]
+        std_value = model_stats_2.loc[ensemble, (metric, 'std')]
+        empirical_value = Motifs_empirical[metric]
+        
+        # Calculate z-score
+        z_score = (empirical_value - mean_value) / std_value if std_value != 0 else None
+        z_scores_df_2.loc[ensemble, metric] = z_score
+
+z_scores_df_2
